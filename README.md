@@ -1,5 +1,5 @@
 # SecureCRT-Keywords
-Collection of various Regular Expressions for `SecureCRT` and its wonderful Keyword Highlighting featuer. Most of these should be universal but the main use case I had was for Juniper devices as that is what I work on for the most part.
+Collection of various Regular Expressions for `SecureCRT` and its wonderful Keyword Highlighting feature. Most of these should be universal but the main use case I had was for Juniper devices as that is what I work on for the most part.
 
 This is a work in progress over time and is updated as the need arises or I find the time to write out the explinations. The one thing I've found is there are many ways to skin the Regular Expressions cat to get the desired effect. I try to make them in a way that they don't create random character highlights that I do not want.
 
