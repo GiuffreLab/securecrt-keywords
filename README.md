@@ -102,4 +102,10 @@ lo0[.]?\d*
 (destination-address [\/a-zA-Z0-9\._-]+)?
 ```
 
+# Appliance Info Related
+
+**Highlight OS Version**
+```
+\b(?:Junos:|JUNOS) [^a-zA-Z][0-9a-zA-Z.-]*\b
+```
 
