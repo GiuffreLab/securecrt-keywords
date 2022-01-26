@@ -23,6 +23,19 @@ Juniper Junos specific keywords. Make sure you check `Regular Expression` box th
 ```
 [agx]e-\d\D\d\D\d*[.]?\d*
 ```
+Explination -
+`[agx]`   matches a single character in the list agx (case sensitive)
+`e-`      matches the characters e- literally (case sensitive)
+`\d`      matches a digit (equivalent to [0-9])
+`\D`      matches any character that's not a digit (equivalent to [^0-9])
+`\d`      matches a digit (equivalent to [0-9])
+`\D`      matches any character that's not a digit (equivalent to [^0-9])
+`\d`      matches a digit (equivalent to [0-9])
+`*`       matches the previous token between zero and unlimited times, as many times as possible, giving back as needed (greedy)
+`[.]`     match a single character present in the list below [.]
+`?`       matches the previous token between zero and one times, as many times as possible, giving back as needed (greedy)
+`\d`      matches a digit (equivalent to [0-9])
+`*`       matches the previous token between zero and unlimited times, as many times as possible, giving back as needed (greedy)
 
 **st0.xx**
 ```
