@@ -56,6 +56,16 @@ lo0[.]?\d*
 - `\d`      matches a digit (equivalent to `[0-9]`)
 - `*`       matches the previous token between zero and unlimited times, as many times as possible, giving back as needed (greedy)
 
+**Up**
+```
+\b(?:up|Up|UP)\b
+```
+
+**Down**
+```
+\b(?:down|Down|DOWN)\b
+```
+
 # Security Policy Related
 **from-zone xxxx**
 ```
@@ -77,7 +87,7 @@ lo0[.]?\d*
 # Port Descriptions
 **description xxxx**
 ```
-(description ["\/a-zA-Z0-9\.\s_\*(),-]+)$   #"
+(:?description) [a-zA-Z0-9_-]*
 ```
 
 # Routing Related
