@@ -23,37 +23,37 @@ Collection of various Regular Expressions for SecureCRT Keyword Highlighting
 ```
 [agx]e-\d\D\d\D\d*[.]?\d*
 ```
-- `[agx]`   matches a single character in the list agx (case sensitive)
-- `e-`      matches the characters e- literally (case sensitive)
-- `\d`      matches a digit (equivalent to [0-9])
-- `\D`      matches any character that's not a digit (equivalent to [^0-9])
-- `\d`      matches a digit (equivalent to [0-9])
-- `\D`      matches any character that's not a digit (equivalent to [^0-9])
-- `\d`      matches a digit (equivalent to [0-9])
+- `[agx]`   matches a single character in the list `agx` (case sensitive)
+- `e-`      matches the characters `e-` literally (case sensitive)
+- `\d`      matches a digit (equivalent to `[0-9]`)
+- `\D`      matches any character that's not a digit (equivalent to `[^0-9]`)
+- `\d`      matches a digit (equivalent to `[0-9]`)
+- `\D`      matches any character that's not a digit (equivalent to `[^0-9]`)
+- `\d`      matches a digit (equivalent to `[0-9]`)
 - `*`       matches the previous token between zero and unlimited times, as many times as possible, giving back as needed (greedy)
-- `[.]`     match a single character present in the list below [.]
+- `[.]`     match a single character present in the list below `[.]`
 - `?`       matches the previous token between zero and one times, as many times as possible, giving back as needed (greedy)
-- `\d`      matches a digit (equivalent to [0-9])
+- `\d`      matches a digit (equivalent to `[0-9]`)
 - `*`       matches the previous token between zero and unlimited times, as many times as possible, giving back as needed (greedy)
 
 **st0.xx**
 ```
 st0[.]?\d*
 ```
-- `st0`     matches the characters st0 literally (case sensitive)
-- `[.]`     match a single character present in the list below [.]
+- `st0`     matches the characters `st0` literally (case sensitive)
+- `[.]`     match a single character present in the list below `[.]`
 - `?`       matches the previous token between zero and one times, as many times as possible, giving back as needed (greedy)
-- `\d`      matches a digit (equivalent to [0-9])
+- `\d`      matches a digit (equivalent to `[0-9]`)
 - `*`       matches the previous token between zero and unlimited times, as many times as possible, giving back as needed (greedy)
 
 **lo0.xxx**
 ```
 lo0[.]?\d*
 ```
-- `lo0`     matches the characters lo0 literally (case sensitive)
-- `[.]`     match a single character present in the list below [.]
+- `lo0`     matches the characters `lo0` literally (case sensitive)
+- `[.]`     match a single character present in the list below `[.]`
 - `?`       matches the previous token between zero and one times, as many times as possible, giving back as needed (greedy)
-- `\d`      matches a digit (equivalent to [0-9])
+- `\d`      matches a digit (equivalent to `[0-9]`)
 - `*`       matches the previous token between zero and unlimited times, as many times as possible, giving back as needed (greedy)
 
 # Security Policy Related
