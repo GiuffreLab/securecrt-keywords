@@ -1,5 +1,5 @@
 # SecureCRT-Keywords
-collection of various Regular Expressions for SecureCRT Keywords
+Collection of various Regular Expressions for SecureCRT Keyword Highlighting
 
 
 # Juniper Keywords
@@ -19,7 +19,7 @@ Juniper Junos specific keywords. Make sure you check `Regular Expression` box th
 ```
 
 
-**ge-x/x/x**
+**ae/ge/xe ports**
 ```
 [agx]e-\d\D\d\D\d*[.]?\d*
 ```
