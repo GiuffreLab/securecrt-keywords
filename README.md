@@ -21,9 +21,18 @@ Juniper Junos specific keywords. Make sure you check `Regular Expression` box th
 
 **ge-x/x/x**
 ```
-[x|g]e-[0-9]\d*[/][0-9]\d*/[0-9]
+[agx]e-\d\D\d\D\d*[.]?\d*
 ```
 
+**st0.xx**
+```
+st0.?\d*
+```
+
+**lo0.xxx**
+```
+lo0.?\d*
+```
 
 **from-zone xxxx**
 ```
