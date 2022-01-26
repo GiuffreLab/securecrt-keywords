@@ -9,6 +9,7 @@ Collection of various Regular Expressions for SecureCRT Keyword Highlighting. Mo
 \b(?:Junos:|JUNOS) [^a-zA-Z][0-9a-zA-Z.-]*\b
 ```
 - `\b`             assert position at a word boundary
+- Non-capturing group `(?:Junos:|JUNOS)`
 - 1st Alternative `Junos:`
 - `Junos:`         matches the characters `Junos:` literally (case sensitive)
 - 2nd Alternative `JUNOS`
@@ -63,6 +64,7 @@ lo0[.]?\d*
 \b(?:up|Up|UP)\b
 ```
 - `\b`      assert position at a word boundary
+- Non-capturing group `(?:up|Up|UP)`
 - 1st Alternative `up`
 - `up`      matches the characters `up` literally (case sensitive)
 - 2nd Alternative `Up`
@@ -75,6 +77,15 @@ lo0[.]?\d*
 ```
 \b(?:down|Down|DOWN)\b
 ```
+- `\b`      assert position at a word boundary
+- Non-capturing group `(?:down|Down|DOWN)`
+- 1st Alternative `down`
+- `down`      matches the characters `down` literally (case sensitive)
+- 2nd Alternative `Down`
+- `Down`      matches the characters `Down` literally (case sensitive)
+- 3rd Alternative `DOWN`
+- `DOWN`      matches the characters `DOWN` literally (case sensitive)
+- `\b`      assert position at a word boundary
 
 **Port description xxxx**
 ```
