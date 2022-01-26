@@ -2,9 +2,7 @@
 Collection of various Regular Expressions for SecureCRT Keyword Highlighting
 
 
-# Juniper Keywords
-
-Juniper Junos specific keywords. Make sure you check `Regular Expression` box then set the desired color.
+# IP Addresses
 
 
 **ipv4 address/subnet**
@@ -17,6 +15,8 @@ Juniper Junos specific keywords. Make sure you check `Regular Expression` box th
 ```
 \s*((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]
 ```
+
+# Appliance Ports
 
 
 **ae/ge/xe ports**
@@ -46,6 +46,7 @@ st0.?\d*
 lo0.?\d*
 ```
 
+# Security Policy Related
 **from-zone xxxx**
 ```
 (from-zone [a-zA-Z0-9_-]+ )
@@ -63,13 +64,13 @@ lo0.?\d*
 (policy [a-zA-Z0-9_-]+ )
 ```
 
-
+# Port Descriptions
 **description xxxx**
 ```
 (description ["\/a-zA-Z0-9\.\s_\*(),-]+)$   #"
 ```
 
-
+# Routing Related
 **source-address xxxx**
 ```
 (source-address [\/a-zA-Z0-9\._-]+)?
