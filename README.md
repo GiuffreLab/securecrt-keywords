@@ -1,23 +1,16 @@
 # SecureCRT-Keywords
-Collection of various Regular Expressions for SecureCRT Keyword Highlighting
+Collection of various Regular Expressions for SecureCRT Keyword Highlighting. Most of these should be universal but the main use case was for Juniper devices.
 
 
-# IP Addresses
+# Appliance Info Related
 
-
-**ipv4 address/subnet**
+**Highlight OS Version**
 ```
-\b(?<!\.)((25[0-5]|(2[0-4]|[0-1]?\d)?\d)\.){3}(25[0-5]|(2[0-4]|[0-1]?\d)?\d)(/\d+)?(?!\.)\b
+\b(?:Junos:|JUNOS) [^a-zA-Z][0-9a-zA-Z.-]*\b
 ```
 
-
-**ipv6 address/subnet**
-```
-\s*((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]
-```
 
 # Appliance Ports
-
 
 **ae/ge/xe ports**
 ```
@@ -66,28 +59,37 @@ lo0[.]?\d*
 \b(?:down|Down|DOWN)\b
 ```
 
+**Port description xxxx**
+```
+(:?description) [a-zA-Z0-9_-]*
+```
+
+# IP Addresses
+
+**ipv4 address/subnet**
+```
+\b(?<!\.)((25[0-5]|(2[0-4]|[0-1]?\d)?\d)\.){3}(25[0-5]|(2[0-4]|[0-1]?\d)?\d)(/\d+)?(?!\.)\b
+```
+
+**ipv6 address/subnet**
+```
+\s*((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]
+```
+
 # Security Policy Related
 **from-zone xxxx**
 ```
 (from-zone [a-zA-Z0-9_-]+ )
 ```
 
-
 **to-zone xxxx**
 ```
 (to-zone [a-zA-Z0-9_-]+ )
 ```
 
-
 **policy xxxx**
 ```
 (policy [a-zA-Z0-9_-]+ )
-```
-
-# Port Descriptions
-**description xxxx**
-```
-(:?description) [a-zA-Z0-9_-]*
 ```
 
 # Routing Related
@@ -96,16 +98,7 @@ lo0[.]?\d*
 (source-address [\/a-zA-Z0-9\._-]+)?
 ```
 
-
 **destination-address xxxx**
 ```
 (destination-address [\/a-zA-Z0-9\._-]+)?
 ```
-
-# Appliance Info Related
-
-**Highlight OS Version**
-```
-\b(?:Junos:|JUNOS) [^a-zA-Z][0-9a-zA-Z.-]*\b
-```
-
