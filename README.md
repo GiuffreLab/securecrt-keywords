@@ -38,13 +38,23 @@ Collection of various Regular Expressions for SecureCRT Keyword Highlighting
 
 **st0.xx**
 ```
-st0.?\d*
+st0[.]?\d*
 ```
+- `st0`     matches the characters st0 literally (case sensitive)
+- `[.]`     match a single character present in the list below [.]
+- `?`       matches the previous token between zero and one times, as many times as possible, giving back as needed (greedy)
+- `\d`      matches a digit (equivalent to [0-9])
+- `*`       matches the previous token between zero and unlimited times, as many times as possible, giving back as needed (greedy)
 
 **lo0.xxx**
 ```
-lo0.?\d*
+lo0[.]?\d*
 ```
+- `lo0`     matches the characters lo0 literally (case sensitive)
+- `[.]`     match a single character present in the list below [.]
+- `?`       matches the previous token between zero and one times, as many times as possible, giving back as needed (greedy)
+- `\d`      matches a digit (equivalent to [0-9])
+- `*`       matches the previous token between zero and unlimited times, as many times as possible, giving back as needed (greedy)
 
 # Security Policy Related
 **from-zone xxxx**
