@@ -8,7 +8,16 @@ Collection of various Regular Expressions for SecureCRT Keyword Highlighting. Mo
 ```
 \b(?:Junos:|JUNOS) [^a-zA-Z][0-9a-zA-Z.-]*\b
 ```
-
+- `\b`             assert position at a word boundary
+- 1st Alternative `Junos:`
+- `Junos:`         matches the characters `Junos:` literally (case sensitive)
+- 2nd Alternative `JUNOS`
+- `JUNOS`          matches the characters `JUNOS` literally (case sensitive)
+- `[^a-zA-Z]`      match a single character not present in the list `[^a-zA-Z]`
+- `[0-9a-zA-Z.-]`  match a single character present in the list `[0-9a-zA-Z.-]`
+- `*`              matches the previous token between zero and unlimited times, as many times as possible, giving back as needed (greedy)
+- `.-`             matches a single character in the list `.-` (case sensitive)
+- `\b`             assert position at a word boundary
 
 # Appliance Ports
 
@@ -24,7 +33,7 @@ Collection of various Regular Expressions for SecureCRT Keyword Highlighting. Mo
 - `\D`      matches any character that's not a digit (equivalent to `[^0-9]`)
 - `\d`      matches a digit (equivalent to `[0-9]`)
 - `*`       matches the previous token between zero and unlimited times, as many times as possible, giving back as needed (greedy)
-- `[.]`     match a single character present in the list below `[.]`
+- `[.]`     match a single character present in the list `[.]`
 - `?`       matches the previous token between zero and one times, as many times as possible, giving back as needed (greedy)
 - `\d`      matches a digit (equivalent to `[0-9]`)
 - `*`       matches the previous token between zero and unlimited times, as many times as possible, giving back as needed (greedy)
@@ -53,6 +62,14 @@ lo0[.]?\d*
 ```
 \b(?:up|Up|UP)\b
 ```
+- `\b`      assert position at a word boundary
+- 1st Alternative `up`
+- `up`      matches the characters `up` literally (case sensitive)
+- 2nd Alternative `Up`
+- `Up`      matches the characters `Up` literally (case sensitive)
+- 3rd Alternative `UP`
+- `UP`      matches the characters `UP` literally (case sensitive)
+- `\b`      assert position at a word boundary
 
 **Down**
 ```
@@ -63,6 +80,12 @@ lo0[.]?\d*
 ```
 (:?description) [a-zA-Z0-9_-]*
 ```
+- 1st Capturing Group `(:?description)`
+- `:`              matches the character `:` literally (case sensitive)
+- `description`    matches the characters description literally (case sensitive)
+- `[a-zA-Z0-9_-]`  match a single character present in the list `[a-zA-Z0-9_-]`
+- `*`              matches the previous token between zero and unlimited times, as many times as possible, giving back as needed (greedy)
+- `_-`             matches a single character in the list `_-` (case sensitive)
 
 # IP Addresses
 
