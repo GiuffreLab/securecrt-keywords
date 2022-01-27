@@ -1,7 +1,7 @@
 # SecureCRT-Keywords
 Collection of various Regular Expressions for `SecureCRT` and its wonderful Keyword Highlighting feature. Most of these should be universal but the main use case I had was for Juniper devices as that is what I work on for the most part.
 
-This is a work in progress over time and is updated as the need arises or I find the time to write out the explinations. The one thing I've found is there are many ways to skin the Regular Expressions cat to get the desired effect. I try to make them in a way that they don't create random character highlights that I do not want.
+This is a work in progress over time and is updated as the need arises or I find the time to write out the explanations. The one thing I've found is there are many ways to skin the Regular Expressions cat to get the desired effect. I try to make them in a way that they don't create random character highlights that I do not want.
 
 
 # Appliance Info Related
@@ -117,24 +117,51 @@ lo0[.]?\d*
 ```
 (from-zone [a-zA-Z0-9_-]+ )
 ```
+- 1st Capturing Group `(from-zone [a-zA-Z0-9_-]+ )`
+- `from-zone`      matches the characters `from-zone` literally (case sensitive)
+- `[a-zA-Z0-9_-]`  match a single character present in the list `[a-zA-Z0-9_-]`
+- `+`              matches the previous token between one and unlimited times, as many times as possible, giving back as needed (greedy)
+- `_-`             matches a single character in the list `_-` (case sensitive)
 
 **to-zone xxxx**
 ```
 (to-zone [a-zA-Z0-9_-]+ )
 ```
+- 1st Capturing Group `(to-zone [a-zA-Z0-9_-]+ )`
+- `to-zone`        matches the characters `to-zone` literally (case sensitive)
+- `[a-zA-Z0-9_-]`  match a single character present in the list `[a-zA-Z0-9_-]`
+- `+`              matches the previous token between one and unlimited times, as many times as possible, giving back as needed (greedy)
+- `_-`             matches a single character in the list `_-` (case sensitive)
 
 **policy xxxx**
 ```
 (policy [a-zA-Z0-9_-]+ )
 ```
+- 1st Capturing Group `(policy [a-zA-Z0-9_-]+ )`
+- `policy`         matches the characters `policy` literally (case sensitive)
+- `[a-zA-Z0-9_-]`  match a single character present in the list `[a-zA-Z0-9_-]`
+- `+`              matches the previous token between one and unlimited times, as many times as possible, giving back as needed (greedy)
+- `_-`             matches a single character in the list `_-` (case sensitive)
 
 # Routing Related
 **source-address xxxx**
 ```
 (source-address [\/a-zA-Z0-9\._-]+)?
 ```
+- 1st Capturing Group `(source-address [\/a-zA-Z0-9\._-]+)?`
+- `?`                      matches the previous token between zero and one times, as many times as possible, giving back as needed (greedy)
+- `source-address`         matches the characters `source-address` literally (case sensitive)
+- `[\/a-zA-Z0-9\._-]`      match a single character present in the list `[\/a-zA-Z0-9\._-]`
+- `+`                      matches the previous token between one and unlimited times, as many times as possible, giving back as needed (greedy)
+- `_-`                     matches a single character in the list `_-` (case sensitive)
 
 **destination-address xxxx**
 ```
 (destination-address [\/a-zA-Z0-9\._-]+)?
 ```
+- 1st Capturing Group `(destination-address [\/a-zA-Z0-9\._-]+)?`
+- `?`                      matches the previous token between zero and one times, as many times as possible, giving back as needed (greedy)
+- `destination-address`    matches the characters `destination-address` literally (case sensitive)
+- `[\/a-zA-Z0-9\._-]`      match a single character present in the list `[\/a-zA-Z0-9\._-]`
+- `+`                      matches the previous token between one and unlimited times, as many times as possible, giving back as needed (greedy)
+- `_-`                     matches a single character in the list `_-` (case sensitive)
