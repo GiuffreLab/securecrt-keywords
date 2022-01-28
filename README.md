@@ -22,6 +22,20 @@ This is a work in progress over time and is updated as the need arises or I find
 - `.-`             matches a single character in the list `.-` (case sensitive)
 - `\b`             assert position at a word boundary
 
+**Operational Mode Prompt**
+```
+[^>]+> 
+```
+make sure you keep the trailing space after the last `>`
+
+
+**Configuration Mode Prompt**
+```
+[^#]+# 
+```
+make sure you keep the trailing space after the last `#`
+
+
 # Appliance Ports
 
 **ae/ge/xe ports**
